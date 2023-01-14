@@ -44,4 +44,27 @@ def lesser_of_two_evens(a, b):
             return b
 
 
-print(lesser_of_two_evens(2, 5))
+def is_prime(n):
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+
+    return True
+
+
+def pattern(n):
+    row = 1
+    while row <= n:
+        col = 1
+        print_val = row
+
+        while col <= row:
+            print(print_val, end=" ")
+            print_val += 1
+            col += 1
+
+        print("\n")
+        row += 1
+
+
+pattern(5)
